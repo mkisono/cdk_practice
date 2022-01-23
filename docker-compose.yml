@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  aws-cdk-client:
+    build: .docker
+    container_name: iac
+    image: iac
+    volumes: 
+      - $PWD:/workspace
+      - $HOME/.aws/:/root/.aws/
+    tty: true
